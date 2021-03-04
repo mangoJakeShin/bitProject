@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt
 form_class = uic.loadUiType("first.ui")[0]
 from socket import *
+import csv
 
 class SocketInfo():
     HOST = "127.0.0.1"
@@ -31,7 +32,31 @@ class MyApp(QMainWindow,form_class):
         self.upBtn.clicked.connect(self.sendUp())
         self.downBtn.clicked.connect(self.sendDown())
         # self.runTab.currentTabText("runTab")
+        self.call_csv()
         self.show()
+
+    def call_csv(self):
+        readlines = []
+        with open('test.csv', newline='') as info:
+            reader = csv.reader(info)
+            for row in reader:
+                readlines.append(row)
+        max = len(readlines)
+
+        for idx in range(1,max):
+            obj = readlines[idx][0]
+            amount = readlines[idx][1]
+            time = readlines[idx][2]
+            place = readlines[idx][4]
+            self.set_col(idx-1, obj, amount, time, place)
+
+
+    def set_col(self, row, obj, amount, time, place):
+        self.statustable.setItem(row, 0, QTableWidgetItem(obj))
+        self.statustable.setItem(row, 1, QTableWidgetItem(amount))
+        self.statustable.setItem(row, 2, QTableWidgetItem(time))
+        self.statustable.setItem(row, 3, QTableWidgetItem(place))
+
 
     def sendRunAll(self):
         to_server = int(1)
