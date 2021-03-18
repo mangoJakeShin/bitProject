@@ -304,6 +304,7 @@ if __name__ == '__main__':
                 if mv_flag == True:
                     kill_move()
                 move_all()
+                mv_flag = True
 
             elif new_command == 2:  # stop
                 if mv_flag == True:
