@@ -75,7 +75,7 @@
        <string>좌측이동</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="firstPos">
+     <widget class="QPushButton" name="upBtn">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -85,7 +85,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>초기위치 이동</string>
+       <string>위로 이동</string>
       </property>
      </widget>
      <widget class="QPushButton" name="rightBtn">
@@ -101,7 +101,7 @@
        <string>우측이동</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="resBtn">
+     <widget class="QPushButton" name="downBtn">
       <property name="geometry">
        <rect>
         <x>450</x>
@@ -117,7 +117,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>실행 예약</string>
+       <string>아래 이동</string>
       </property>
      </widget>
     </widget>
@@ -188,81 +188,6 @@
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="infoTab">
-     <attribute name="title">
-      <string>QR 변경</string>
-     </attribute>
-     <widget class="QPushButton" name="runAllBtn_2">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>240</y>
-        <width>141</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>등록</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="runAllBtn_3">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>100</y>
-        <width>141</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>변경/제거</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="statustable_2">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>50</y>
-        <width>291</width>
-        <height>291</height>
-       </rect>
-      </property>
-      <property name="rowCount">
-       <number>20</number>
-      </property>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column>
-       <property name="text">
-        <string>Item no.</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
      </widget>
     </widget>
     <widget class="QWidget" name="tab">
